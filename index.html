@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peg Kennedy, PhD, RN, FNP-BC | Supplement Consulting Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2C5F7D 0%, #3a7a9d 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        header h2 {
+            font-size: 1.3rem;
+            font-weight: normal;
+            margin-bottom: 0.5rem;
+            opacity: 0.95;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            background: white;
+            border-radius: 8px;
+            padding: 3rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .hero h3 {
+            color: #2C5F7D;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+        }
+
+        .service-card h4 {
+            color: #2C5F7D;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card .price {
+            font-weight: bold;
+            color: #2C5F7D;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .benefits {
+            background: white;
+            border-radius: 8px;
+            padding: 3rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .benefits h3 {
+            color: #2C5F7D;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        .benefits li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2C5F7D;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .downloads {
+            background: white;
+            border-radius: 8px;
+            padding: 3rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .downloads h3 {
+            color: #2C5F7D;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .download-card {
+            border: 2px solid #E8F4F8;
+            border-radius: 8px;
+            padding: 1.5rem;
+            background: #f8fcfe;
+            transition: all 0.3s ease;
+        }
+
+        .download-card:hover {
+            border-color: #2C5F7D;
+            background: white;
+        }
+
+        .download-card h4 {
+            color: #2C5F7D;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .download-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #2C5F7D;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: #1e4456;
+        }
+
+        .contact {
+            background: linear-gradient(135deg, #2C5F7D 0%, #3a7a9d 100%);
+            color: white;
+            border-radius: 8px;
+            padding: 3rem;
+            margin: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .contact h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid white;
+        }
+
+        .specialty-protocols {
+            background: white;
+            border-radius: 8px;
+            padding: 3rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .specialty-protocols h3 {
+            color: #2C5F7D;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .protocol-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .protocol-tag {
+            background: #E8F4F8;
+            color: #2C5F7D;
+            padding: 0.7rem 1.2rem;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header h2 {
+                font-size: 1.1rem;
+            }
+
+            .hero h3 {
+                font-size: 1.5rem;
+            }
+
+            .services-grid,
+            .download-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Supplement Consulting Services</h1>
+        <h2>Peg Kennedy, PhD, RN, FNP-BC</h2>
+        <p>Serving Family Practice and Pediatric Offices in Metro Detroit</p>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <h3>Elevate Patient Care with Expert Supplement Guidance</h3>
+            <p>I provide specialized supplement consulting as a direct extension of primary care practices. As an experienced nurse educator with a PhD, I ensure patients receive evidence-based recommendations using pharmaceutical-grade products while you maintain complete oversight of their care.</p>
+            <p><strong>Zero administrative burden. All consultations are private pay by patients—no billing through your practice. Complete communication with detailed provider reports.</strong></p>
+        </div>
+
+        <div class="benefits">
+            <h3>Why Practices Partner With Me</h3>
+            <ul>
+                <li>Expert patient education from an experienced nurse educator</li>
+                <li>Zero administrative burden – patients pay directly, no billing through your practice</li>
+                <li>Complete communication loop with detailed provider reports after every consultation</li>
+                <li>Comprehensive medication-supplement interaction screening</li>
+                <li>Access to physician-grade supplements with superior bioavailability and third-party testing</li>
+                <li>Supports both patient-initiated requests AND provider-recommended supplementation</li>
+            </ul>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h4>Initial Consultation</h4>
+                <p><strong>Duration:</strong> 45-60 minutes</p>
+                <p>Comprehensive health history, medication review, personalized protocol development, detailed provider report</p>
+                <p class="price">Patient Investment: $100-150</p>
+            </div>
+
+            <div class="service-card">
+                <h4>Follow-Up Consultation</h4>
+                <p><strong>Duration:</strong> 30 minutes</p>
+                <p>Progress monitoring, protocol adjustments, ongoing education, updated provider report</p>
+                <p class="price">Patient Investment: $100</p>
+            </div>
+
+            <div class="service-card">
+                <h4>Mini-Consultation</h4>
+                <p><strong>Duration:</strong> 15 minutes</p>
+                <p>Quick supplement questions, simple recommendations, focused guidance</p>
+                <p class="price">Patient Investment: $50</p>
+            </div>
+        </div>
+
+        <div class="specialty-protocols">
+            <h3>Condition-Specific Protocol Consultations</h3>
+            <p>For providers managing specific health conditions, I offer targeted protocol consultations using evidence-based Designs for Health clinical protocols. Patient investment: $175-200</p>
+            <p style="margin-top: 1rem;"><strong>Available protocols include such as:</strong></p>
+            <div class="protocol-tags">
+                <span class="protocol-tag">Immune Support</span>
+                <span class="protocol-tag">Digestive Health</span>
+                <span class="protocol-tag">Cardiometabolic Health</span>
+                <span class="protocol-tag">Women's Health</span>
+                <span class="protocol-tag">Sleep & Stress</span>
+                <span class="protocol-tag">ADHD & Cognitive Support</span>
+                <span class="protocol-tag">And More</span>
+            </div>
+        </div>
+
+        <div class="downloads">
+            <h3>Download Marketing Materials</h3>
+            <p>Professional materials for healthcare practices interested in learning more about supplement consulting services</p>
+            
+            <div class="download-grid">
+                <div class="download-card">
+                    <h4>Introduction Flyer</h4>
+                    <p>One-page overview perfect for leaving with office managers or handing to providers</p>
+                    <a href="downloads/Introduction-Flyer.docx" class="download-btn" download>Download Flyer</a>
+                </div>
+
+                <div class="download-card">
+                    <h4>Services Overview</h4>
+                    <p>Comprehensive 2-page document with detailed service information and evidence</p>
+                    <a href="downloads/Services-Overview.docx" class="download-btn" download>Download Overview</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h3>Ready to Enhance Patient Outcomes?</h3>
+            <p>Contact me to discuss how supplement consulting can benefit your practice</p>
+            <p><a href="mailto:dr.peg.wellness@gmail.com">dr.peg.wellness@gmail.com</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Peg Kennedy, PhD, RN, FNP-BC | Supplement Consulting Services | Metro Detroit</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Professional supplement consulting for primary care practices</p>
+    </footer>
+</body>
+</html>
